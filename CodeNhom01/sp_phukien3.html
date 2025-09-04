@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clélie - CHI TIẾT SẢN PHẨM</title>
+  <link rel="icon" href="/Images/logo.jpg">
+
+  <link href="/CSS/bootstrap.min.css" rel="stylesheet" />
+  <link href="/CSS/all.min.css" rel="stylesheet" />
+  <link href="/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/CSS_CODE/product.css">
+
+  <!-- Thêm online -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+  <!--link code-->
+  <link href="CSS_CODE/product.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/CSS_CODE/INDEX.css">
+</head>
+<body class="min-h-screen flex flex-col font-sans">
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+      <div class="container header-content">
+          <a class="navbar-brand logo" href="/INDEX.html">Clélie</a>
+
+          <div class="d-flex align-items-center order-lg-last ms-auto header-actions">
+
+              <div class="search-bar">
+                  <input type="search" class="search-input" placeholder="Tìm kiếm..." width="50">
+                  <button type="submit" class="search-button">
+                      🔍
+                  </button>
+              </div>
+              <a href="/LOGIN.html" class="icon-btn">👤</a>
+              <a href="/booking.html" class="icon-btn">
+                  🛒<span class="cart-count">0</span>
+              </a>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNavbar">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 main-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/INDEX.html">Trang Chủ</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="/shop.html">Cửa Hàng</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle " href="#" id="sanphamDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Sản Phẩm
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
+                          <li><a class="dropdown-item nav-link" href="/vay.html">Đầm</a></li>
+                          <li><a class="dropdown-item nav-link" href="/aothun.html">Set trang phục</a></li>
+                          <li><a class="dropdown-item nav-link" href="/phukien.html">Phụ kiện</a></li>
+                          <li><a class="dropdown-item nav-link" href="/giay.html">Giày</a></li>
+
+                      </ul>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="/ABOUT.html">Về Chúng Tôi</a>
+                  </li>
+
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header>
+<!--header-->
+
+
+    <!-- Main Content -->
+    <main class="pt-5 mt-5">
+      <div class="container py-5 fade-up fade-up-delay-1">
+          <div id="product-not-found" class="text-center d-none">
+              <h1 class="h4 mb-3">Product Not Found</h1>
+              <p class="mb-4">Sản phẩm bạn tìm không tồn tại.</p>
+              <button id="return-to-shop-btn" class="btn btn-dark">Quay lại shop</button>
+          </div>
+          <div id="product-content" class="row align-items-start">
+              <div class="col-md-6 mb-4">
+                  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="/Images/phukien/pk5.jpg" class="d-block w-100 rounded" alt="Lắc Tay Ngọc Trai - Ảnh 1">
+                          </div>
+                          <div class="carousel-item">
+                              <img src="/Images/phukien/pk6.jpg" class="d-block w-100 rounded" alt="Lắc Tay Ngọc Trai - Ảnh 2">
+                          </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                      </button>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <small class="text-muted" id="product-category">Phụ kiện</small>
+                  <h1 class="h3 fw-bold my-2" id="product-name">Dây Chuyền Ngọc Trai</h1>
+                  <p class="text-danger fs-5 fw-semibold" id="product-price">₫195,000</p>
+                  <p class="text-secondary" id="product-description">
+                      Ngọc trai nhân tạo, kiểu dáng nhẹ nhàng, thanh lịch.<br>
+                      Màu trắng ngọc trai, dài 18cm.
+                  </p>
+                  <div class="mb-3">
+                      <h5 class="mb-2">Loại</h5>
+                      <div class="btn-group" role="group" id="size-options">
+                          <button type="button" class="btn btn-outline-dark size-option">Ngắn</button>
+                          <button type="button" class="btn btn-outline-dark size-option">Trung bình</button>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <h5 class="mb-2">Số lượng</h5>
+                      <div class="input-group" style="max-width: 160px;">
+                          <button class="btn btn-outline-secondary" type="button" id="decrease-quantity">-</button>
+                          <div class="form-control text-center" id="quantity-display">1</div>
+                          <button class="btn btn-outline-secondary" type="button" id="increase-quantity">+</button>
+                      </div>
+                  </div>
+                  <button id="add-to-cart-button" class="btn btn-dark mt-3 w-100 py-3"
+                      data-id="pk3"
+                      data-name="Lắc Tay Ngọc Trai"
+                      data-price="195000"
+                      data-image="/Images/phukien/pk5.jpg">
+                      Thêm vào giỏ hàng
+                  </button>
+                  <div class="mt-4 border-top pt-3 small text-muted">
+                      <p><strong>Miễn phí vận chuyển</strong> cho đơn hàng trên ₫750,000</p>
+                      <p>Hỗ trợ đổi trả trong 30 ngày nếu sản phẩm lỗi.</p>
+                  </div>
+                  <div id="toast-container" class="mt-3">
+                      </div>
+              </div>
+          </div>
+      </div>
+  </main>
+  
+
+    <!--footer-->
+<footer class="site-footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="footer-col">
+              <h3>Clélie</h3>
+              <p>Thời trang thanh lịch và bền vững dành cho phụ nữ hiện đại.</p> <div class="social-links">
+                  <a href="#" aria-label="Instagram">
+                      <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#" aria-label="Facebook">
+                      <i class="fa-brands fa-square-facebook"></i>
+                  </a>
+                  <a href="#" aria-label="Pinterest">
+                      <i class="fa-brands fa-pinterest"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="footer-col">
+              <h4>SHOP</h4> <ul>
+                  <li><a href="#">Hàng Mới Về</a></li>
+                  <li><a href="#">Bán Chạy Nhất</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>HELP</h4> <ul>
+                  <li><a href="#">Liên Hệ Chúng Tôi</a></li>
+                  <li><a href="#">Vận Chuyển & Đổi Trả</a></li>
+                  <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                  <li><a href="#">Hướng Dẫn Kích Cỡ</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>ABOUT</h4> <ul>
+                  <li><a href="#">Câu Chuyện Của Chúng Tôi</a></li>
+                  <li><a href="#">Tính Bền Vững</a></li>
+                  <li><a href="#">Truyền Thông</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2025 Clélie. Bảo lưu mọi quyền by Nhóm 1.</p> <div class="policy-links">
+              <a href="#">Chính Sách Quyền Riêng Tư</a> <a href="#">Điều Khoản Dịch Vụ</a>
+          </div>
+      </div>
+  </div>
+</footer>
+    <script src="/JavaScript/SHOP.js"></script>
+    <script src="/JavaScript/product.js"></script>
+    <script src="/JavaScript/booking.js"></script> 
+    <script src="/JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

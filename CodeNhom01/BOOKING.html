@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giỏ hàng & Thanh toán</title>
+    <link rel="icon" href="/Images/logo.jpg">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/all.min.css" rel="stylesheet" />
+    <link href="/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="/CSS_CODE/booking.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/CSS_CODE/INDEX.css">
+</head>
+<body class="pt-5">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+            <div class="container header-content">
+                <a class="navbar-brand logo" href="/INDEX.html">Clélie</a>
+
+                <div class="d-flex align-items-center order-lg-last ms-auto header-actions">
+
+                    <div class="search-bar">
+                        <input type="search" class="search-input" placeholder="Tìm kiếm..." width="50">
+                        <button type="submit" class="search-button">
+                            🔍
+                        </button>
+                    </div>
+                    <a href="/LOGIN.html" class="icon-btn">👤</a>
+                    <a href="/booking.html" class="icon-btn">
+                        🛒<span class="cart-count">0</span>
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 main-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/INDEX.html">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/shop.html">Cửa Hàng</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="sanphamDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sản Phẩm
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
+                                <li><a class="dropdown-item nav-link" href="/vay.html">Đầm</a></li>
+                                <li><a class="dropdown-item nav-link" href="/aothun.html">Set trang phục</a></li>
+                                <li><a class="dropdown-item nav-link" href="/phukien.html">Phụ kiện</a></li>
+                                <li><a class="dropdown-item nav-link" href="/giay.html">Giày</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ABOUT.html">Về Chúng Tôi</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4">
+        <div class="row g-4 mt-4">
+            <form action="/thankyou.html" method="get" class="col-lg-8 bg-white p-4 rounded shadow-sm " id="checkout-form">
+                <h4 class="mb-3">Thông tin liên hệ </h4>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com" required />
+                </div>
+                <h4 class="mt-4 mb-3">Thanh toán</h4>
+                <div class="small text-muted mb-2">Mọi giao dịch đều an toàn và được mã hóa.</div>
+                <div class="mb-3">
+                    <label for="payment-method" class="form-label">Phương thức thanh toán</label>
+                    <select class="form-select" id="payment-method">
+                        <option value="paypal">Paypal</option>
+                        <option value="creditcard">Thẻ tín dụng</option>
+                        <option value="cod">Tiền mặt khi giao hàng</option>
+                    </select>
+                </div>
+                <div class="text-muted small mb-4">
+                    <p>• Chính sách vận chuyển được áp dụng.</p>
+                    <p>• Vui lòng điền tên Instagram vào mục tên công ty.</p>
+                </div>
+                <h4 class="mb-3">Địa chỉ thanh toán</h4>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Quốc gia/Khu vực *</label>
+                    <select class="form-select" id="country">
+                        <option selected>Vietnam</option>
+                        <option>USA</option>
+                        <option>Khác</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="first-name" class="form-label">Tên (tùy chọn)</label>
+                        <input type="text" class="form-control" id="first-name" placeholder="Tên" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="last-name" class="form-label">Họ *</label>
+                        <input type="text" class="form-control" id="last-name" placeholder="Họ" required />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="company" class="form-label">Công ty (tùy chọn)</label>
+                    <input type="text" class="form-control" id="company" placeholder="Tên công ty hoặc Instagram" />
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Địa chỉ *</label>
+                    <input type="text" class="form-control" id="address" placeholder="Địa chỉ" required />
+                </div>
+                <div class="mb-3">
+                    <label for="apartment" class="form-label">Căn hộ, phòng, v.v. (tùy chọn)</label>
+                    <input type="text" class="form-control" id="apartment" placeholder="Thông tin bổ sung" />
+                </div>
+                <div class="mb-3">
+                    <label for="city" class="form-label">Thành phố *</label>
+                    <input type="text" class="form-control" id="city" required />
+                </div>
+                <div class="mb-3">
+                    <label for="postal-code" class="form-label">Mã bưu chính (tùy chọn)</label>
+                    <input type="text" class="form-control" id="postal-code" />
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="form-label">Số điện thoại *</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Số điện thoại" required />
+                </div>
+                <button type="submit" class="btn complete-order w-100">Hoàn tất đơn hàng</button>
+            </form>
+
+            <div class="col-lg-4 bg-white p-4 rounded shadow-sm">
+                <h4 class="mb-3">Tóm tắt đơn hàng</h4>
+                <div id="cart-items"></div><hr />
+
+                <button id="clear-cart" class="btn complete-order w-100 mb-3">Xóa toàn bộ giỏ hàng</button>
+                <div class="d-flex justify-content-between fw-bold">
+                    <span>Tổng cộng:</span>
+                    <span id="total-price">0 VND</span>
+                </div>
+                <div class="text-muted small mt-1" id="tax-info">Bao gồm 0 VND tiền thuế</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Clélie</h3>
+                    <p>Thời trang thanh lịch và bền vững dành cho phụ nữ hiện đại.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <ul>
+                        <li><a href="#noibat">Hàng Mới Về</a></li>
+                        <li><a href="#">Bán Chạy Nhất</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="/ABOUT.html">Liên Hệ Chúng Tôi</a></li>
+                        <li><a href="#">Vận Chuyển & Đổi Trả</a></li>
+                        <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                        <li><a href="#">Hướng Dẫn Kích Cỡ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="#">Câu Chuyện Của Chúng Tôi</a></li>
+                        <li><a href="#">Tính Bền Vững</a></li>
+                        <li><a href="#">Truyền Thông</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Clélie. Bảo lưu mọi quyền by Nhóm 1.</p>
+                <div class="policy-links">
+                    <a href="#">Chính Sách Quyền Riêng Tư</a>
+                    <a href="#">Điều Khoản Dịch Vụ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="JavaScript/booking.js"></script>
+    <script src="JavaScript/INDEX.js"></script>
+    <script src="JavaScript/booking.js"></script>
+    <script src="/JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clélie - NHÓM 4</title>
+    <link rel="icon" href="/Images/logo.jpg">
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="/CSS/all.min.css" rel="stylesheet" />
+    <link href="/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <link rel="javascript" href="/JavaScript/shop.js">
+    <link rel="stylesheet" href="/CSS_CODE/shop.css">
+    <link rel="stylesheet" href="/CSS_CODE/INDEX.css">
+    <link rel="javascript" href="/JavaScript/INDEX.js">
+
+</head>
+<body class="min-h-screen flex flex-col font-inter bg-clelie-beige text-gray-800 antialiased"> 
+<header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container header-content">
+            <a class="navbar-brand logo" href="/INDEX.html">Clélie</a>
+
+            <div class="d-flex align-items-center order-lg-last ms-auto header-actions">
+
+                <div class="search-bar">
+                    <input type="search" class="search-input" placeholder="Tìm kiếm..." width="50">
+                    <button type="submit" class="search-button">
+                        🔍
+                    </button>
+                </div>
+                <a href="/LOGIN.html" class="icon-btn">👤</a>
+                <a href="/booking.html" class="icon-btn">
+                    🛒<span class="cart-count">0</span>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 main-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/INDEX.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/shop.html">Cửa Hàng</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="sanphamDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sản Phẩm
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="sanphamDropdown">
+                            <li><a class="dropdown-item nav-link" href="/vay.html">Đầm</a></li>
+                            <li><a class="dropdown-item nav-link" href="/aothun.html">Set trang phục</a></li>
+                            <li><a class="dropdown-item nav-link" href="/phukien.html">Phụ kiện</a></li>
+                            <li><a class="dropdown-item nav-link" href="/giay.html">Giày</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ABOUT.html">Về Chúng Tôi</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--header-->
+
+<main class="flex-grow pt-24 mt-5">
+    <div class="bg-clelie-beige py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="font-playfair text-3xl md:text-4xl text-center">Our Collection</h1>
+        </div>
+
+
+        <div class="container mx-auto px-4 py-8 filter-sort-section">
+            <div class="flex flex-wrap justify-center gap-2 mb-4 md:mb-0 filter-buttons-group" id="filter-buttons">
+                <form action="/shop.html">
+                    <button type="submit" class="px-4 py-2 text-sm border border-clelie-burgundy text-clelie-burgundy hover:bg-clelie-burgundy hover:text-white filter-button">All</button>
+                </form>
+                <form action="/vay.html">
+                    <button type="submit" class="px-4 py-2 text-sm filter-button active">Váy</button>
+                </form>
+                <form action="/aothun.html">
+                    <button type="submit" class="px-4 py-2 text-sm border border-clelie-burgundy text-clelie-burgundy hover:bg-clelie-burgundy hover:text-white filter-button">Áo thun</button>
+                </form>
+                <form action="/phukien.html">
+                    <button type="submit" class="px-4 py-2 text-sm border border-clelie-burgundy text-clelie-burgundy hover:bg-clelie-burgundy hover:text-white filter-button">Phụ kiện</button>
+                </form>
+                <form action="/giay.html">
+                    <button type="submit" class="px-4 py-2 text-sm border border-clelie-burgundy text-clelie-burgundy hover:bg-clelie-burgundy hover:text-white filter-button">Giày</button>
+                </form>
+            </div>
+
+            <div class="flex items-center sort-dropdown-group">
+                <label for="sort" class="mr-2 text-sm">Sort by:</label>
+                <select id="sort" class="border border-gray-300 p-2 text-sm focus:outline-none focus:ring-1 focus:ring-clelie-burgundy">
+                    <option value="default">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <a href="/sp_vay1.html" class="text-decoration-none text-dark">
+    <div class="products-grid">
+        <div class="product-card">
+            <div class="image-container">
+                <img src="/images/vay/vay10.jpg" alt="Donna Karan Midi Dress">
+                <div class="quick-add"
+                     data-id="vay1"
+                     data-name="Donna Karan Midi Belted Dress"
+                     data-price="3867147"
+                     data-image="/images/vay/vay10.jpg">Thêm Nhanh</div>
+            </div>
+            <div class="product-info">
+                <span class="category">Váy</span>
+                <h3>Donna Karan Midi Belted</h3>
+                <p class="price">567.147 VND</p>
+            </div>
+        </div>
+    </a>
+    <a href="/sp_vay2.html" class="text-decoration-none text-dark">
+        <div class="product-card">
+            <div class="image-container">
+                <img src="/images/vay/vay6.jpg" alt="Váy Lụa Trễ Vai NV636">
+                <div class="quick-add"
+                     data-id="vay2"
+                     data-name="Váy Lụa Trễ Vai NV636"
+                     data-price="189000"
+                     data-image="/images/vay/vay2.jpg">Thêm Nhanh</div>
+            </div>
+            <div class="product-info">
+                <span class="category">Váy</span>
+                <h3>Váy Lụa Trễ Vai NV636</h3>
+                <p class="price">189.000 VND</p>
+            </div>
+        </div>
+    </a>
+    <a href="/sp_vay3.html" class="text-decoration-none text-dark">
+        <div class="product-card">
+            <div class="image-container">
+                <img src="/images/vay/vay2.jpg" alt="Đầm Viền Bèo KK174-21">
+                <div class="quick-add"
+                     data-id="vay3"
+                     data-name="Đầm Viền Bèo KK174-21"
+                     data-price="560000"
+                     data-image="/images/vay/vay6.jpg">Thêm Nhanh</div>
+            </div>
+            <div class="product-info">
+                <span class="category">Váy</span>
+                <h3>Đầm Viền Bèo KK174-21</h3>
+                <p class="price">560.000 VND</p>
+            </div>
+        </div>
+    </a>
+    <a href="/sp_vay4.html" class="text-decoration-none text-dark">
+        <div class="product-card">
+            <div class="image-container">
+                <img src="/images/vay/vay7.jpg" alt="Chân Váy Khóa Kim Loại">
+                <div class="quick-add"
+                     data-id="vay4"
+                     data-name="Chân Váy Khóa Kim Loại"
+                     data-price="499000"
+                     data-image="/images/vay/vay17.jpg">Thêm Nhanh</div>
+            </div>
+            <div class="product-info">
+                <span class="category">Váy</span>
+                <h3>Chân Váy Khóa Kim Loại</h3>
+                <p class="price">499.000 VND</p>
+            </div>
+        </div>
+    </div>
+    </a>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Clélie</h3>
+                    <p>Thời trang thanh lịch và bền vững dành cho phụ nữ hiện đại.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <ul>
+                        <li><a href="#noibat">Hàng Mới Về</a></li>
+                        <li><a href="#">Bán Chạy Nhất</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <ul>
+                        <li><a href="/ABOUT.html">Liên Hệ Chúng Tôi</a></li>
+                        <li><a href="#">Vận Chuyển & Đổi Trả</a></li>
+                        <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                        <li><a href="#">Hướng Dẫn Kích Cỡ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="#">Câu Chuyện Của Chúng Tôi</a></li>
+                        <li><a href="#">Tính Bền Vững</a></li>
+                        <li><a href="#">Truyền Thông</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Clélie. Bảo lưu mọi quyền by Nhóm 1.</p>
+                <div class="policy-links">
+                    <a href="#">Chính Sách Quyền Riêng Tư</a>
+                    <a href="#">Điều Khoản Dịch Vụ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript/booking.js"></script>
+    <script src="JavaScript/INDEX.js"></script>
+    <script src="JavaScript/booking.js"></script>
+    <script src="/JS/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,154 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;}
+    .lead{
+        font-size: 24px;
+    }
+   
+    /* --- Kiểu dáng riêng cho trang "Về Chúng Tôi" --- */
+.team-member-img {
+    height: 400px; 
+    overflow: hidden; /* Ẩn phần ảnh bị tràn */
+    border-radius: 20px; 
+}
+
+/* --- Các lớp tiện ích dựa trên màu sắc chính --- */
+.bg-cream {
+    background-color: #f5f0e9;
+}
+
+.bg-beige {
+    background-color: #f8f5f1;
+}
+
+.text-RustRed {
+    color: #a66b6b;
+}
+
+/* Phần Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* --- Phần Footer (chân trang) --- */
+.site-footer {
+    background-color: #2a2a2a; /* Nền màu tối */
+    color: white; /* Chữ màu trắng */
+    padding: 4rem 0 2rem; /* Đệm trên dưới */
+}
+
+.footer-content {
+    display: grid; /* Sử dụng grid để sắp xếp cột */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tự động chia cột, mỗi cột tối thiểu 200px */
+    gap: 2rem; /* Khoảng cách giữa các cột */
+    margin-bottom: 3rem;
+}
+
+.footer-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif; 
+}
+
+.footer-col h4 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    font-family: 'Lato', sans-serif; 
+}
+
+.footer-col p {
+    color: #6c757d; 
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem; /* Khoảng cách giữa các biểu tượng mạng xã hội */
+}
+
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%; /* Bo tròn hoàn toàn */
+        border: 1px solid rgba(255,255,255,0.2); /* Viền màu trắng hơi trong suốt */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease; /* Hiệu ứng chuyển động */
+        color: white; /* Màu biểu tượng */
+        font-size: 1.1rem;
+    }
+
+        .social-links a:hover {
+            background-color: rgba(255,255,255,0.1); /* Nền hơi trong suốt hơn khi di chuột qua */
+            border-color: rgba(255,255,255,0.4); /* Viền rõ hơn khi di chuột qua */
+        }
+
+.footer-col ul {
+    display: flex;
+    flex-direction: column; /* Các mục xếp chồng lên nhau */
+    gap: 0.5rem; /* Khoảng cách giữa các mục */
+}
+
+    .footer-col ul a {
+        color: #6c757d; /* Màu chữ của link */
+        transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
+    }
+
+        .footer-col ul a:hover {
+            color: #f9d2d2; /* Đổi màu link khi di chuột qua */
+            opacity: 0.88; /* Giảm độ mờ để tạo hiệu ứng */
+        }
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các mục xuống dòng trên màn hình nhỏ */
+    justify-content: space-between; /* Đặt các mục cách đều nhau */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1); /* Đường viền trên mỏng */
+    color: #6c757d; /* Màu chữ mờ */
+    font-size: 0.875rem; /* Kích thước chữ nhỏ */
+    margin-top: 2rem; /* Khoảng cách với nội dung phía trên */
+}
+
+
+
+.policy-links {
+    display: flex;
+    gap: 1.5rem; /* Khoảng cách giữa các link chính sách */
+    margin-top: 1rem; /* Khoảng cách khi xuống dòng trên màn hình nhỏ */
+}
+
+@media (min-width: 768px) { /* Điều chỉnh cho màn hình lớn hơn */
+    .policy-links {
+        margin-top: 0; /* Bỏ khoảng cách khi không xuống dòng */
+    }
+}
